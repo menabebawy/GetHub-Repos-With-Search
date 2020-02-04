@@ -2,8 +2,25 @@
 //  RepositoriesModuleCoordinator.swift
 //  GitHubReposWithSearch
 //
-//  Created by user165891 on 2/4/20.
+//  Created by Mena Bebawy on 2/4/20.
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import RepositoriesModule
+
+final class RepositoriesModuleCoordinator: Coordinator {
+    var childCoordinators: [Coordinator] = []
+    unowned let navigationController: UINavigationController
+    
+    required init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        let nibName = String(describing: RepositoriesModuleViewController.self)
+        let rendererViewController = RepositoriesModuleViewController(nibName: nibName, bundle: .main)
+        navigationController.viewControllers = [rendererViewController]
+    }
+    
+}
