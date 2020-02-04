@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Repositories: Codable {
+public struct Repositories: Decodable {
     public let totalCount: Int
     public let items: [Repository]
 

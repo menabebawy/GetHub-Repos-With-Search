@@ -20,6 +20,7 @@ final class RepositoriesModuleCoordinator: Coordinator {
     func start() {
         let nibName = String(describing: RepositoriesModuleViewController.self)
         let rendererViewController = RepositoriesModuleViewController(nibName: nibName, bundle: .main)
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [rendererViewController]
     }
     

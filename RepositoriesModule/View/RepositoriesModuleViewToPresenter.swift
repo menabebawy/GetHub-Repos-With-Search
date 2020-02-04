@@ -9,5 +9,7 @@
 import Foundation
 
 protocol RepositoriesModuleViewToPresenter {
-    
+    func viewIsReady()
+    func viewWillAppear()
+    func fetchRepositories()
 }

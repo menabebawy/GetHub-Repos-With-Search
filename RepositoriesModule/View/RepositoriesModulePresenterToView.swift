@@ -6,7 +6,14 @@
 //  Copyright © 2020 Mena. All rights reserved.
 //
 
-import Foundation
+import Entities
 
-protocol RepositoriesModulePresenterToView {
+protocol RepositoriesModulePresenterToView: class {
+    func addSearchBar()
+    func addNavigationBarTitle()
+    func requestRepositoris()
+    func deselectSelectedRows()
+    func configureTableView()
+    func reloadTableView(by repositories: [Repository])
+    func updateTableView(by repositories: [Repository], perPage: Int)
 }

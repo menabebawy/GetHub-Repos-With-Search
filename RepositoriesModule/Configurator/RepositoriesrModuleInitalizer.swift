@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+final class RepositoriesModuleInitalizer: NSObject {
+    @IBOutlet weak private var repositoriesModuleViewController: RepositoriesModuleViewController!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let configurator = RepositoriesModuleConfigurator()
+        configurator.configureModuleForViewInput(viewInput: repositoriesModuleViewController)
+    }
+
+}

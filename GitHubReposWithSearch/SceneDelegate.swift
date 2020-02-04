@@ -11,7 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var rendererCoordinator : RepositoriesModuleCoordinator?
+    var repositoriesModuleCoordinator : RepositoriesModuleCoordinator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = UINavigationController()
         
-        rendererCoordinator = RepositoriesModuleCoordinator(navigationController: window?.rootViewController as! UINavigationController)
-        rendererCoordinator?.start()
+        repositoriesModuleCoordinator = RepositoriesModuleCoordinator(navigationController: window?.rootViewController as! UINavigationController)
+        repositoriesModuleCoordinator?.start()
         
         window?.makeKeyAndVisible()
     }
