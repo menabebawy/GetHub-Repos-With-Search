@@ -34,7 +34,6 @@
 		5A1FADD923E9BDAD0087E034 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1FADD123E9BDAD0087E034 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A1FADDE23E9BDC10087E034 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FADDD23E9BDC10087E034 /* Repositories.swift */; };
 		5A1FADE023E9BDEB0087E034 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FADDF23E9BDEB0087E034 /* Repository.swift */; };
-		5A1FADE223E9BE180087E034 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FADE123E9BE180087E034 /* Contributor.swift */; };
 		5A1FADE523E9BF730087E034 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5A1FADE423E9BF730087E034 /* Kingfisher */; };
 		5A1FADEC23E9C2D50087E034 /* RepositoriesModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FADEB23E9C2D50087E034 /* RepositoriesModuleConfigurator.swift */; };
 		5A1FADEE23E9C2EF0087E034 /* RepositoriesModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FADED23E9C2EF0087E034 /* RepositoriesModuleInteractor.swift */; };
@@ -179,7 +178,6 @@
 		5A1FADD423E9BDAD0087E034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A1FADDD23E9BDC10087E034 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		5A1FADDF23E9BDEB0087E034 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		5A1FADE123E9BE180087E034 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		5A1FADEB23E9C2D50087E034 /* RepositoriesModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModuleConfigurator.swift; sourceTree = "<group>"; };
 		5A1FADED23E9C2EF0087E034 /* RepositoriesModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModuleInteractor.swift; sourceTree = "<group>"; };
 		5A1FADEF23E9C30C0087E034 /* RepositoriesModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModulePresenter.swift; sourceTree = "<group>"; };
@@ -367,7 +365,6 @@
 				5A1FADDD23E9BDC10087E034 /* Repositories.swift */,
 				5A1FADDF23E9BDEB0087E034 /* Repository.swift */,
 				5AFC6C6523EA138100CCBA2F /* Owner.swift */,
-				5A1FADE123E9BE180087E034 /* Contributor.swift */,
 				5A1FADD323E9BDAD0087E034 /* Entities.h */,
 				5A1FADD423E9BDAD0087E034 /* Info.plist */,
 			);
@@ -744,7 +741,6 @@
 			files = (
 				5A1FADDE23E9BDC10087E034 /* Repositories.swift in Sources */,
 				5AFC6C6623EA138100CCBA2F /* Owner.swift in Sources */,
-				5A1FADE223E9BE180087E034 /* Contributor.swift in Sources */,
 				5A1FADE023E9BDEB0087E034 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

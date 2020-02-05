@@ -9,4 +9,6 @@
 public enum NetworkError: Error {
     case unknown
     case noJSONData
+    case parseLinks
+    case parseNextLink(String)
 }

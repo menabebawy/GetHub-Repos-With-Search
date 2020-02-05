@@ -17,15 +17,25 @@ final class RepositoriesModuleInteractor {
 // MARK: - Repositories module presenter to interactor
 
 extension RepositoriesModuleInteractor: RepositoriesModulePresenterToInteractor {
-    func fetchRepositories(pageIndex: Int, perPage: Int) {
-        let service = GitHubService.repositories(pageIndex: pageIndex, perPage: perPage)
+    func fetchRepositories(nextUrl: URL) {
+        sessionProvider.request(type: Repositories.self, url: nextUrl) { response in
+            self.handleRespons(response)
+        }
+    }
+    
+    func fetchRepositories(searchText: String, pageIndex: Int) {
+        let service = GitHubService.repositories(searchText: searchText, pageIndex: pageIndex)
         sessionProvider.request(type: Repositories.self, service: service) { response in
-            switch response {
-            case let .success(repositories):
-                self.interactorToPresenterProtocol.fetched(repositories: repositories.items)
-            case let .failure(error):
-                self.interactorToPresenterProtocol.failedToFetchRepositories(error: error)
-            }
+             self.handleRespons(response)
+        }
+    }
+    
+    private func handleRespons(_ response: NetworkResponse<Repositories>) {
+        switch response {
+        case let .success(repositories, nextUrl):
+            self.interactorToPresenterProtocol.fetched(repositories: repositories.items, nextUrl: nextUrl)
+        case let .failure(error):
+            self.interactorToPresenterProtocol.failedToFetchRepositories(error: error)
         }
     }
     

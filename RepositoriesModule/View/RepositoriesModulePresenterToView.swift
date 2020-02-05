@@ -15,5 +15,5 @@ protocol RepositoriesModulePresenterToView: class {
     func deselectSelectedRows()
     func configureTableView()
     func reloadTableView(by repositories: [Repository])
-    func updateTableView(by repositories: [Repository], perPage: Int)
+    func updateTableView(by repositories: [Repository])
 }

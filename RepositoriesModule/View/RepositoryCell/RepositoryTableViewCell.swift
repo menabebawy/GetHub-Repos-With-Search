@@ -20,6 +20,7 @@ final class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak private var numberOfWatchesLabel: UILabel!
     
     static let identifier = "RepositoryCell"
+    static let estimatedHeight: CGFloat = 100
 
     override func awakeFromNib() {
         super.awakeFromNib()

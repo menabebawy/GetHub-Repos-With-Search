@@ -9,6 +9,6 @@
 import Entities
 
 protocol RepositoriesModuleInteractorToPresenter {
-    func fetched(repositories: [Repository])
+    func fetched(repositories: [Repository], nextUrl: URL?)
     func failedToFetchRepositories(error: Error)
 }

@@ -11,5 +11,9 @@ import Foundation
 protocol RepositoriesModuleViewToPresenter {
     func viewIsReady()
     func viewWillAppear()
-    func fetchRepositories()
+    func fetchFirstPageOfRepositoris(searchText: String)
+    func fetchMoreRepositories(searchText: String)
+    func sectionHeight(repositoriesCount: Int) -> Int
+    func sectionTitle(repositoriesCount: Int) -> String
+    func resetIndex()
 }

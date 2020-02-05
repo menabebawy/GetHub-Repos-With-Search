@@ -7,6 +7,6 @@
 //
 
 public enum NetworkResponse<T> {
-    case success(T)
+    case success(models: T, nextUrl: URL?)
     case failure(NetworkError)
 }
